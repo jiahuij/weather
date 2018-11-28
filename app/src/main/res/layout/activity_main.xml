@@ -66,7 +66,7 @@
         android:layout_height="wrap_content" />
 
     <TableLayout
-        android:background="drawable/border"
+        android:background="@drawable/border"
         android:layout_marginTop="10dp"
         android:stretchColumns="*"
         android:padding="16dp"
@@ -78,7 +78,7 @@
             android:layout_height="wrap_content">
 
             <TextView
-                android:background="drawable/cell"
+                android:background="@drawable/cell"
                 android:text="Wind"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>
@@ -97,7 +97,7 @@
             android:layout_height="wrap_content">
 
             <TextView
-                android:background="drawable/cell"
+                android:background="@drawable/cell"
                 android:text="Pressure"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>
@@ -135,7 +135,7 @@
             android:layout_height="wrap_content">
 
             <TextView
-                android:background="drawable/cell"
+                android:background="@drawable/cell"
                 android:text="Sunrise"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>
@@ -154,7 +154,7 @@
             android:layout_height="wrap_content">
 
             <TextView
-                android:background="drawable/cell"
+                android:background="@drawable/cell"
                 android:text="Sunset"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>
@@ -173,7 +173,7 @@
             android:layout_height="wrap_content">
 
             <TextView
-                android:background="drawable/cell"
+                android:background="@drawable/cell"
                 android:text="Geo coords"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>

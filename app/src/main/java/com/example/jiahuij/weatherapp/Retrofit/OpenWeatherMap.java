@@ -11,7 +11,7 @@ public interface OpenWeatherMap
 {
     @GET("weather")
     io.reactivex.Observable<WeatherResult> getWeatherByLatLng(@Query("lat")String lat,
-                                                              @Query("log")String lng,
-                                                              @Query("appid")String appid,
+                                                              @Query("long")String lng,
+                                                              @Query("id")String wid,
                                                               @Query("units")String unit);
 }

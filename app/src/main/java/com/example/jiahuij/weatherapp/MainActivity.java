@@ -73,7 +73,7 @@ public class MainActivity extends AppCompatActivity {
 
 
         setContentView(R.layout.activity_main);
-        coordinatorLayout = (CoordinatorLayout) findViewById(R.id.root_view);
+       // coordinatorLayout = (CoordinatorLayout) findViewById(R.id.root_view);
         compositeDisposable = new CompositeDisposable();
         Retrofit retrofit = RetrofitClient.getInstance();
         mService = retrofit.create(OpenWeatherMap.class);
@@ -92,8 +92,6 @@ public class MainActivity extends AppCompatActivity {
 
         weather_panel =findViewById(R.id.weather_panel);
         loading = findViewById(R.id.loading);
-
-        getWeatherInfoMation();
 
 
 
@@ -128,12 +126,12 @@ public class MainActivity extends AppCompatActivity {
                     }
                 }).check();
 
-
+        getWeatherInfoMation();
     }
 
     private void getWeatherInfoMation() {
-        compositeDisposable.add(mService.getWeatherByLatLng(String.valueOf(common.current_location.getLatitude()),
-                String.valueOf(common.current_location.getLongitude()),
+        compositeDisposable.add(mService.getWeatherByLatLng(String.valueOf(common.current_location),
+                String.valueOf(common.current_location),
                 common.APP_ID,
                 "metric")
                 .subscribeOn(Schedulers.io())
@@ -195,13 +193,13 @@ public class MainActivity extends AppCompatActivity {
 
                 common.current_location = locationResult.getLastLocation();
 
-                viewPager = findViewById(R.id.view_pager);
+              //  viewPager = findViewById(R.id.view_pager);
                 setupViewPager(viewPager);
-                tabLayout = findViewById(R.id.tabs);
+              //  tabLayout = findViewById(R.id.tabs);
                 tabLayout.setupWithViewPager(viewPager);
 
                 //log
-                Log.d("Localtion",locationResult.getLastLocation().getAltitude()+"/"+locationResult.getLastLocation().getLongitude());
+                Log.d("Location",locationResult.getLastLocation().getAltitude()+"/"+locationResult.getLastLocation().getLongitude());
             }
         };
     }
